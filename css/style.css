@@ -22,7 +22,7 @@ table {border-collapse: collapse;border-spacing: 0;}
 
 @font-face {font-family: "SketchRockwell Bold";src: url("SketchRockwell-Bold.ttf");}
 
-body{background: url(bg.jpg); height: 100%;}
+body{background: url(bg.jpg); height: 100%; font-family: Times, Arial, sans-serif;}
 
 header#blog-title{font-family: "SketchRockwell Bold", Arial, sans-serif; padding: 15px 15px 75px;}
 header#blog-title h1.title{font-size: 80px;}
@@ -34,6 +34,8 @@ section#blog-content ul.posts li, article#post{padding: 8px 35px 8px 14px;margin
 section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
 section#blog-content p.post-summary{font-size: 18px;}
+section#blog-content p.post-read-more{text-align: right;}
+section#blog-content p a{color: #B22222;}
 
 article#post{min-height: 300px;margin-bottom:120px;}
 article#post header h2{font-size: 48px;color: #B22222;}
