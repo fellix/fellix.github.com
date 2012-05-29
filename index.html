@@ -5,9 +5,12 @@ title: Rafael Felix's blog
 <ul class="posts">
   {% for post in site.posts limit:5 offset: 0 %}
     <li>
-      <h2 class="post-title"><a href='{{post.url}}'>{{post.title}}</a></h2>
+      <h2 class="post-title">
+        <a href='{{post.url}}'>{{post.title}}</a>
+        <span class='post-date'>{{post.date | date: "%B %d, %Y"}}</span>
+      </h2>
       <hr>
-      <p class="post-summary">{{post.summary}}</p>
+      <p class="post-summary">{{ post.content | strip_html | truncatewords: 25 }}</p>
       <p class="post-read-more"><a href='{{post.url}}'>Read more</a></p>
     </li>
   {% endfor %}

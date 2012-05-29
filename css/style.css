@@ -1,7 +1,7 @@
 
-/* 
+/*
   Resets
-  http://meyerweb.com/eric/tools/css/reset/ 
+  http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -30,16 +30,19 @@ header#blog-title a{text-decoration: none;color: #000;}
 header#blog-title p.subtitle{font-size: 25px;}
 
 section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px auto;width: 700px;}
+section#blog-content ul.posts{margin-bottom:120px;}
 section#blog-content ul.posts li, article#post{padding: 8px 35px 8px 14px;margin-bottom: 18px;text-shadow: 0 1px 0 rgba(255,255,255,.5);border: 1px solid #BEBEBE;background-color: #E8E8E8;border-radius: 4px;}
 section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
+section#blog-content span.post-date{font-size: 14px;float: right;margin-top: 15px;}
 section#blog-content p.post-summary{font-size: 18px;}
 section#blog-content p.post-read-more{text-align: right;}
-section#blog-content p a{color: #B22222;}
+section#blog-content p a{color: #B22222;text-decoration:none;}
+section#blog-content p a:hover{text-decoration:underline;}
 
 article#post{min-height: 300px;margin-bottom:120px;}
 article#post header h2{font-size: 48px;color: #B22222;}
-article#post header p{color: #2E8B57;text-align: right;font-size: 20px;}
+article#post header p{text-align: right;font-size: 20px;text-decoration: underline;}
 section#post-content, section#post-content p{font-size: 18px;padding-top: 10px;line-height: 1.5em;}
 
 footer#blog-footer{background: url(footer-bg.jpg) repeat-x;position:fixed;left:0px;bottom:0px;height:4em;width:100%;font-size: 1.3em;}
