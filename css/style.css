@@ -24,14 +24,16 @@ table {border-collapse: collapse;border-spacing: 0;}
 
 body{background: url(bg.jpg); height: 100%; font-family: Times, Arial, sans-serif;}
 
+section#page{ width:960px; margin:0 auto;}
+
 header#blog-title{font-family: "SketchRockwell Bold", Arial, sans-serif; padding: 15px 15px 75px;}
 header#blog-title h1.title{font-size: 80px;}
 header#blog-title a{text-decoration: none;color: #000;}
 header#blog-title p.subtitle{font-size: 25px;}
 
-section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px auto;width: 700px;}
+section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px 60px;width: 700px;}
 section#blog-content ul.posts{margin-bottom:120px;}
-section#blog-content ul.posts li, article#post{padding: 8px 35px 8px 14px;margin-bottom: 18px;text-shadow: 0 1px 0 rgba(255,255,255,.5);border: 1px solid #BEBEBE;background-color: #E8E8E8;border-radius: 4px;}
+section#blog-content ul.posts li, article#post{padding: 8px 14px;margin-bottom: 18px;text-shadow: 0 1px 0 rgba(255,255,255,.5);border: 1px solid #BEBEBE;background-color: #E8E8E8;border-radius: 4px;}
 section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
 section#blog-content span.post-date{font-size: 14px;float: right;margin-top: 15px;}

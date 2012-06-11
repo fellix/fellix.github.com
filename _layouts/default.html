@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css"/>
   </head>
   <body>
-    <header id="blog-title">
-      <a href='/'>
-        <h1 class="title">Rafael Felix's blog</h1>
-      </a>
-      <p class="subtitle">Ruby, Rails, Java, Javascript and more</p>
-    </header>
-    <section id="blog-content">
-        {{ content }}
+    <section id="page">
+      <header id="blog-title">
+        <a href='/'>
+          <h1 class="title">Rafael Felix's blog</h1>
+        </a>
+        <p class="subtitle">Ruby, Rails, Java, Javascript and more</p>
+      </header>
+      <section id="blog-content">
+          {{ content }}
+      </section>
+      <footer id="blog-footer">
+        <ul>
+          <li><a href='/about.html'>Sobre</a></li>
+          <li><a href='http://twitter.com/rs_felix' target="_blank">@rs_felix</a></li>
+          <li><a href='http://github.com/fellix' target="_blank">GitHub</a></li>
+          <li><a href='/atom.xml'>Feed</a></li>
+        </ul>
+      </footer>
     </section>
-    <footer id="blog-footer">
-      <ul>
-        <li><a href='/about.html'>Sobre</a></li>
-        <li><a href='http://twitter.com/rs_felix' target="_blank">@rs_felix</a></li>
-        <li><a href='http://github.com/fellix' target="_blank">GitHub</a></li>
-        <li><a href='/atom.xml'>Feed</a></li>
-      </ul>
-    </footer>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
@@ -36,16 +38,16 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    <script type="text/javascript"> 
-      var $buoop = {} 
-      $buoop.ol = window.onload; 
-      window.onload=function(){ 
-       try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
-       var e = document.createElement("script"); 
-       e.setAttribute("type", "text/javascript"); 
-       e.setAttribute("src", "http://browser-update.org/update.js"); 
-       document.body.appendChild(e); 
-      } 
+    <script type="text/javascript">
+      var $buoop = {}
+      $buoop.ol = window.onload;
+      window.onload=function(){
+       try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+       var e = document.createElement("script");
+       e.setAttribute("type", "text/javascript");
+       e.setAttribute("src", "http://browser-update.org/update.js");
+       document.body.appendChild(e);
+      }
     </script>
   </body>
 </html>
