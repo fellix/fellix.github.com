@@ -7,35 +7,35 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css"/>
   </head>
   <body>
-    <section id="page">
       <header id="blog-title">
-        <a href='/'>
-          <h1 class="title">Rafael Felix's blog</h1>
-        </a>
-        <p class="subtitle">Ruby, Rails, Java, Javascript and more</p>
+        <div class='header-container'>
+          <div class='img-container'>
+            <img src='/img/profile.png'/>
+          </div>
+          <div class='author'>
+            <a href='/'>
+              <h1 class='title'>Rafael Felix</h1>
+            </a>
+            <ul>
+              <li>
+                <a href='http://github.com/fellix' target='_blank'><img src='/img/github.png' alt='fellix on github'/></a>
+              </li>
+              <li>
+                <a href='http://twitter.com/rs_felix' target='_blank'><img src='/img/twitter.png' alt='fellix on twitter'/></a>
+              </li>
+              <li>
+                <a href='http://br.linkedin.com/in/felixrafael' target='_blank'><img src='/img/linkedin.png' alt='Rafael Fleix on Linkedin'/></a>
+              </li>
+              <li>
+                <a href='/atom.xml' target='_blank'><img src='/img/feed.png' alt='blog feed'/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
+    <section id="page">
       <section id="blog-content">
           {{ content }}
-      </section>
-      <section id="about">
-        <div id='img-container'>
-          <img src='http://www.gravatar.com/avatar/a70aa5d32b9c30f1f9c94d0ae47093ac.png'/>
-        </div>
-        <p class='name'>Rafael Felix</p>
-        <ul>
-          <li>
-            <a href='http://github.com/fellix' target='_blank'><img src='/img/github.png' alt='fellix on github'/></a>
-          </li>
-          <li>
-            <a href='http://twitter.com/rs_felix' target='_blank'><img src='/img/twitter.png' alt='fellix on twitter'/></a>
-          </li>
-          <li>
-            <a href='http://br.linkedin.com/in/felixrafael' target='_blank'><img src='/img/linkedin.png' alt='Rafael Fleix on Linkedin'/></a>
-          </li>
-          <li>
-            <a href='/atom.xml' target='_blank'><img src='/img/feed.png' alt='blog feed'/></a>
-          </li>
-        </ul>
       </section>
     </section>
     <script type="text/javascript">

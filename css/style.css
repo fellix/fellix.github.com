@@ -24,15 +24,19 @@ table {border-collapse: collapse;border-spacing: 0;}
 
 body{background: url(bg.jpg); height: 100%; font-family: Times, Arial, sans-serif;}
 
-section#page{ width:960px; margin:0 auto;}
+section#page, header#blog-title .header-container{ width:960px; margin:0 auto;}
 
-header#blog-title{font-family: "SketchRockwell Bold", Arial, sans-serif; padding: 15px 15px 75px;}
+header#blog-title{font-family: "SketchRockwell Bold", Arial, sans-serif; padding: 15px 15px 75px;height:80px;background: url(footer-bg.jpg);margin-bottom:13px;width:100%;border-bottom: 2px #B22222 solid;}
 header#blog-title h1.title{font-size: 80px;}
-header#blog-title a{text-decoration: none;color: #000;}
+header#blog-title a{text-decoration: none;color: #fff;}
 header#blog-title p.subtitle{font-size: 25px;}
+header#blog-title .img-container{ width: 200px; float: left;}
+header#blog-title img{ border-radius:4px;}
+header#blog-title .author{ width: 700px; float:left;}
+header#blog-title .author ul li{ display: inline-block; width: 32px; height: 32px;}
 
-section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px 60px;width:650px;}
-section#blog-content ul.posts{margin-bottom:120px;width:100%}
+section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px 60px;width:650px;clear:both;}
+section#blog-content ul.posts{width:100%}
 section#blog-content ul.posts li, article#post{padding: 8px 14px;margin-bottom: 18px;text-shadow: 0 1px 0 rgba(255,255,255,.5);border: 1px solid #BEBEBE;background-color: #E8E8E8;border-radius: 4px;}
 section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
@@ -42,13 +46,9 @@ section#blog-content p.post-read-more{text-align: right;}
 section#blog-content p a{color: #B22222;text-decoration:none;}
 section#blog-content p a:hover{text-decoration:underline;}
 
-article#post{min-height: 300px;margin-bottom:120px;}
+article#post{min-height: 300px;}
 article#post header h2{font-size: 48px;color: #B22222;}
 article#post header p{text-align: right;font-size: 20px;text-decoration: underline;}
 section#post-content, section#post-content p{font-size: 18px;padding-top: 10px;line-height: 1.5em;}
 
-section#about{width: 200px;position:fixed;top:0;right:0;margin-top:195px;}
-section#about div#img-container{ padding-left:35px; }
-section#about img{ border-radius:4px;}
-section#about p.name { padding-top: 10px; padding-bottom: 10px; font-family: "SketchRockwell Bold", Arial, sans-serif;font-size: 22px;}
-section#about ul li{ display: inline-block; width: 32px; height: 32px;}
+.clearfix{ clear: both; }
