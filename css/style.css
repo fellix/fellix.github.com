@@ -22,7 +22,7 @@ table {border-collapse: collapse;border-spacing: 0;}
 
 @font-face {font-family: "SketchRockwell Bold";src: url("SketchRockwell-Bold.ttf");}
 
-body{background: url(bg.jpg); height: 100%; font-family: Times, Arial, sans-serif;}
+body{background: url(bg.jpg); height: 100%; font-family: Verdana, Arial, sans-serif;}
 
 section#page, header#blog-title .header-container{ width:960px; margin:0 auto;}
 
@@ -35,20 +35,24 @@ header#blog-title img{ border-radius:4px;}
 header#blog-title .author{ width: 700px; float:left;}
 header#blog-title .author ul li{ display: inline-block; width: 32px; height: 32px;}
 
-section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto 60px 60px;width:650px;clear:both;}
+section#blog-content{min-height: 100%;height: auto !important;height: 100%;margin: 0 auto;width:100%;clear:both;}
 section#blog-content ul.posts{width:100%}
-section#blog-content ul.posts li, article#post{padding: 8px 14px;margin-bottom: 18px;text-shadow: 0 1px 0 rgba(255,255,255,.5);border: 1px solid #BEBEBE;background-color: #E8E8E8;border-radius: 4px;}
 section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
-section#blog-content span.post-date{font-size: 14px;float: right;margin-top: 15px;}
-section#blog-content p.post-summary{font-size: 18px;}
-section#blog-content p.post-read-more{text-align: right;}
+section#blog-content .post-info{ padding: 10px 0 0; }
+section#blog-content .posts p { display: inline-block;padding-top:10px; }
+section#blog-content .post-date{ background: url(/img/calendar.png) no-repeat; min-width:32px;min-height:32px;}
+section#blog-content .post-date span{ padding-left: 35px;}
+section#blog-content .post-read-more{float: right;}
 section#blog-content p a{color: #B22222;text-decoration:none;}
 section#blog-content p a:hover{text-decoration:underline;}
 
 article#post{min-height: 300px;}
+article#post .post-date { margin-top:5px; }
+article#post header{ height:85px; }
 article#post header h2{font-size: 48px;color: #B22222;}
-article#post header p{text-align: right;font-size: 20px;text-decoration: underline;}
+article#post header p{font-size: 20px;padding: 6px 0 0;}
+article#post hr { clear: both; }
 section#post-content, section#post-content p{font-size: 18px;padding-top: 10px;line-height: 1.5em;}
 
 .clearfix{ clear: both; }
