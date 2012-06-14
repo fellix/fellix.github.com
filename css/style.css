@@ -41,7 +41,7 @@ section#blog-content h2.post-title{font-size: 32px;}
 section#blog-content h2.post-title a{color: #B22222;text-decoration: none;}
 section#blog-content .post-info{ padding: 10px 0 0; }
 section#blog-content .posts p { display: inline-block;padding-top:10px; }
-section#blog-content .post-date{ background: url(/img/calendar.png) no-repeat; min-width:32px;min-height:32px;}
+section#blog-content .post-date{ background: url(/img/calendar.png) no-repeat; min-width:32px;min-height:32px;float:left;}
 section#blog-content .post-date span{ padding-left: 35px;}
 section#blog-content .post-read-more{float: right;}
 section#blog-content p a{color: #B22222;text-decoration:none;}
