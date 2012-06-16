@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Welcome to my new blog
+description: "I was started blogging on my another domain http://rollingwithcode.blogspot.com, but time passed, and I stopped some time ago. Sometimes a new subject comes to write something, and I made some drafts, but I didn't like my old blog, I can't change the layout as I want, I can't freely-edit my articles, and I tried to build my own solution, but I didn't like that too."
 ---
 
 I was started blogging on my [another domain](http://rollingwithcode.blogspot.com), but time passed, and I stopped some time ago. Sometimes a new subject comes to write something, and I made some drafts, but I didn't like my old blog, I can't change the layout as I want, I can't freely-edit my articles, and I tried to build my own solution, but I didn't like that too.
