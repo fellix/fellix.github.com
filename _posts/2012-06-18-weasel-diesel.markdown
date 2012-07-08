@@ -5,7 +5,7 @@ keywords: Weasel-Diesel,rspec,rspec custom matchers,webservice,api
 description: "Visão geral do uso do Weasel-Diesel com Rails, e como usar para testar seus serviços."
 ---
 
-Alguns dias atrás [Matt Aimonet](http://twitter.com/merbist) escreveu em seu [blog um artigo sobre repensar o desenvolvimento de web services](http://matt.aimonetti.net/posts/2012/06/13/rethinking-web-service-development/), antes de continuar lendo esse post seria interessante ler o dele.
+Alguns dias atrás [Matt Aimonetti](http://twitter.com/merbist) escreveu em seu [blog um artigo sobre repensar o desenvolvimento de web services](http://matt.aimonetti.net/posts/2012/06/13/rethinking-web-service-development/), antes de continuar lendo esse post seria interessante ler o dele.
 
 Não vou rescrever o que ele já escreveu, vou abordar mais a parte técnica da proposta dele, o [Weasel-Diesel](https://github.com/mattetti/Weasel-Diesel). A primeira vista quando olhei o código da DSL pensei:
 
@@ -196,6 +196,6 @@ Apesar de em uma primeira olhada achar o Weasel-Diesel um tanto estranho, depois
 rake doc:services
 {% endhighlight %}
 
-e você verá uma simples documentação gerada, baseada nos serviços descritos. O código usado para gerar é o mesmo da aplicação de exemplo disponibilizada pelo Matt Aimonet, com algumas alterações pro nosso exemplo.
+e você verá uma simples documentação gerada, baseada nos serviços descritos. O código usado para gerar é o mesmo da aplicação de exemplo disponibilizada pelo Matt Aimonetti, com algumas alterações pro nosso exemplo.
 
 Se você escreve serviços usando Ruby, talvez valha a pena dar uma olhada no Weasel-Dielsel.
