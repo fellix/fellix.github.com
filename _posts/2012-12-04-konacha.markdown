@@ -1,0 +1,107 @@
+---
+layout: post
+title: Konacha
+keywords: konacha, javascript, javascript testing, javascript bdd, mocha, chai
+description: "Exemplos de como utilizar a biblioteca konacha para testar o javascript de sua aplicação Rails"
+---
+
+A algum tempo, quando comecei a estudar [Backbone.js](http://backbonejs.org/), li alguns artigos a respeito de como testar seu código JavaScript, na época o  framework mais utilizado era o [Jasmine](http://pivotal.github.com/jasmine/), com um sintaxe que lembrava o RSpec rápidamente ganhou popularidade na comunidade.
+
+Porém com a chegada do Rails 3 e o asset-pipeline, algumas coisas ficaram complicadas de serem testadas usando o jasmine, então se fez necessário o uso de ferramentas como o [jasminerice](https://github.com/bradphelan/jasminerice).
+
+Não faz muito tempo fui apresentado ao [Koncha](https://github.com/jfirebaugh/konacha), nesse post vou mostrar como escrever testes usando essa ferramenta.
+
+### O que é Konacha?
+
+[![Konacha][2]][1]
+
+  [1]: http://en.wikipedia.org/wiki/Konacha
+  [2]: https://github.com/jfirebaugh/konacha/raw/master/vendor/images/konacha.jpg
+  
+ Konacha é uma *Rails Engine* criada para permitir testar JavaScript usando o framework [Mocha](http://visionmedia.github.com/mocha/) e combinado com a biblioteca de assertion [chai](http://chaijs.com/).
+ 
+ A melhor parte é que o konacha é feito para usar com Rails e asset-pipeline. Tornando os testes JavaScript da sua aplicação muito mais simples, sem comentar, que o Konacha lhe permite rodar seus testes em uma aplicação separada, ou então usando drivers como [Poltergeist](https://github.com/jonleighton/poltergeist) ou o [Capybara-Webkit](https://github.com/thoughtbot/capybara-webkit)
+ 
+
+### Aplicação de exemplo
+
+Para mostrar como usar o konacha, vamos criar uma aplicação de exemplo.  A aplicação conterá somente um JavaScript para validar se um CPF é válido ou não.
+
+Para começar vamos escrever a spec do nosso validador:
+
+*spec/javascripts/cpf_validator_spec.js*
+{% highlight javascript %}
+//= require cpf_validator
+
+describe("CpfValidator", function () {
+  describe("checking when a number is valid cpf", function () {
+    it("returns false when a invalid numer was given", function () {
+      var validator = new CpfValidator("12312312312");
+
+      expect(validator.isValid()).to.be.false
+    });
+
+    it("returns true when a invalid numer was given", function () {
+      var validator = new CpfValidator("78088398339");
+
+      expect(validator.isValid()).to.be.true
+    });
+  });
+});
+{% endhighlight %}
+
+no nosso teste fica claro que nossa api pública será bem simples, um objeto CpfValidator recebe um número e responde a um método isValid que retorna true ou false, para dizer se o número informado é válido ou não. Segue abaixo a implementação do validator:
+
+{% highlight javascript %}
+window.CpfValidator = function (number) {
+  this.number = number;
+
+  this.isValid = function () {
+    return digitsMatches();
+  }
+
+  function digitsMatches() {
+    return digitMatches(9) && digitMatches(10);
+  }
+
+  function digitMatches(digit) {
+    var sum = 0,
+        digits = getDigits();
+
+    for (var i = 0; i < digit; i++) {
+      sum += digits[i] * (digit + 1 - i);
+    }
+
+    result = sum % 11;
+    if (result < 2) {
+      result = 0;
+    } else {
+      result = 11 - result;
+    }
+
+    return result == digits[digit];
+  }
+
+  function getDigits() {
+    return number.match(/\d/gi);
+  }
+}
+{% endhighlight %}
+
+o nosso validator funciona de forma simples, ele recebe um número do cpf, e calcula se os dois digitos batem com os informados. Essa validação é da implementação da gem [CPFValidation](https://github.com/nohupbrasil/cpf_validator), levemente adaptada para o nosso exemplo, e é claro, convertida para JavaScript.
+
+Executamos nosso teste para ver se nossa implementação está de acordo com nossa especificação:
+
+*bundle exec rake konacha:serve*
+
+um servidor *WebBrick* será iniciado, e ao acessar a url *http://localhost:3500* e você verá uma página como a imagem abaixo:
+
+![Saída do teste do Konacha](http://cl.ly/image/210g2h0W0R3Y/Screen%20Shot%202012-12-02%20at%205.30.57%20PM.png)
+
+que mostra que os dois cenários passaram, caso algum deles não tive passado, veriamos um simbolo vermelho ao lado da descrição do cenário. Caso queira ver o código ele está no [GitHub](https://github.com/fellix/konacha-sample)
+
+### Moving on
+
+Nesse pequeno exemplo foi mostrado como usar o Konacha para escrever testes de JavaScript de sua aplicação Rails. Vale ressaltar que o Konacha só funciona dentro de aplicações Rails, mas ainda sim você pode usar o *Mocha* e o *Chai* para criar seus testes de JavaScript puro.
+
+Caso queira testar, baixo o código do exemplo, e adicione mais casos de teste, como por exemplo: validar um cpf com máscara.
